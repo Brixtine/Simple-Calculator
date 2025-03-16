@@ -12,6 +12,8 @@ function handleChanges(keyPressed){
         display.textContent = '0';
     } else if(keyPressed === '=' || keyPressed ==='Enter'){
         try{
+            currentInput = currentInput.replace(/(\d+(\.\d+)?)%(?=[^0-9]|$)/g, (match, number) => `(${parseFloat(number)}/100)`);
+
             currentInput = eval(currentInput).toString();
             display.textContent = currentInput;
         } catch {
