@@ -1,0 +1,66 @@
+:root{
+    --primary-color: dimgrey;
+    --background-color: pink;
+    --text-color: white;
+
+    --font-size-lg: 3rem;
+    --font-size-mid: 2.5rem;
+    --btn-size: 80px;
+    --spacing: 15px;
+}
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: var(--text-color);
+    user-select: none;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#calculator{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
+}
+#display-wrapper{
+    margin-top: var(--spacing);
+    margin-left: var(--spacing);
+    width: 91%;
+    background-color: var(--primary-color);
+    height: 10%;
+}
+#display{
+    margin-top: 5px;
+    margin-right: 10px;
+    font-size: var(--font-size-mid);
+    text-align: right;
+    overflow-x: auto;
+}
+#buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing);
+    margin: var(--spacing);
+}
+.btn{
+    font-size: var(--font-size-lg);
+    border-radius: 5px;
+    border: 0px;
+    background-color: var(--primary-color);
+    justify-content: center;
+    width: var(--btn-size);
+    height: var(--btn-size);
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.btn:hover{
+    background-color: deeppink;
+    transform: scale(.9); 
+}
+
